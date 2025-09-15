@@ -9,53 +9,55 @@
 <body>
 
 <header>
-  <h1>CodeCraft – Курси з Unity3D + C#</h1>
-  <p>Навчись створювати власні ігри з нуля!</p>
-  <a href="#contact" class="btn">Записатись</a>
+  <div class="profile">
+    <img src="me.jpg" alt="Моє фото" class="profile-pic">
+    <h1>Привіт, я Макс</h1>
+    <p>Викладач курсів з Unity3D + C#</p>
+    <div class="buttons">
+      <a href="https://t.me/твій_нік" target="_blank" class="btn">Telegram</a>
+      <a href="https://instagram.com/твій_нік" target="_blank" class="btn">Instagram</a>
+    </div>
+  </div>
 </header>
 
-<section class="about">
-  <h2>Про курс</h2>
-  <p>Наш курс допоможе тобі опанувати основи програмування на C# та створення ігор у Unity3D. 
-  Від простих механік до повноцінних проєктів – разом крок за кроком!</p>
-</section>
+<main>
+  <section class="accordion">
+    <button class="accordion-btn">Про мене</button>
+    <div class="accordion-content">
+      <p>Я навчаю дітей та дорослих створювати ігри на C# та Unity3D. Пояснюю простими словами і даю багато практики.</p>
+    </div>
 
-<section class="program">
-  <h2>Програма курсу</h2>
-  <ul>
-    <li>✅ Основи C# та ООП</li>
-    <li>✅ Знайомство з Unity3D</li>
-    <li>✅ Створення 2D та 3D ігор</li>
-    <li>✅ Анімація, UI та звуки</li>
-    <li>✅ Робота з фізикою</li>
-    <li>✅ Фінальний проєкт – твоя власна гра</li>
-  </ul>
-</section>
+    <button class="accordion-btn">Мої уроки</button>
+    <div class="accordion-content">
+      <p>На заняттях ти навчишся створювати 2D та 3D ігри, працювати з анімаціями, UI, фізикою та робити власні проєкти.</p>
+    </div>
 
-<section class="reviews">
-  <h2>Відгуки</h2>
-  <blockquote>
-    "Курс дуже сподобався! Викладач пояснює доступно, і вже після першого тижня я зробив свою першу гру!" – Ірина
-  </blockquote>
-  <blockquote>
-    "Давно мріяв навчитись робити ігри. Тепер маю власний прототип ігорки на телефоні!" – Максим
-  </blockquote>
-</section>
+    <button class="accordion-btn">Ціни</button>
+    <div class="accordion-content">
+      <p>Пробне заняття – безкоштовно.<br> Індивідуальні уроки – від 300 грн / година.<br> Групові заняття – від 200 грн / година.</p>
+    </div>
 
-<section id="contact">
-  <h2>Запис на курс</h2>
-  <p style="text-align:center;">Залиш заявку, і ми зв’яжемося з тобою:</p>
-  <form>
-    <input type="text" placeholder="Ваше ім’я" required>
-    <input type="email" placeholder="Ваш Email" required>
-    <textarea placeholder="Повідомлення"></textarea>
-    <button type="submit" class="btn">Надіслати</button>
-  </form>
-</section>
+    <button class="accordion-btn">Відгуки</button>
+    <div class="accordion-content">
+      <blockquote>“Курс дуже сподобався! Викладач пояснює доступно, і вже після першого тижня я зробила свою першу гру!” – Ірина</blockquote>
+      <blockquote>“Давно мріяв навчитись робити ігри. Тепер маю власний прототип ігорки на телефоні!” – Максим</blockquote>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Запис на курс</h2>
+    <form>
+      <input type="tel" placeholder="Ваш номер телефону" required>
+      <input type="text" placeholder="Ваш Telegram (необов’язково)">
+      <button type="submit" class="btn">Записатись</button>
+    </form>
+  </section>
+</main>
 
 <footer>
   <p>© 2025 CodeCraft. Усі права захищено.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
