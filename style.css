@@ -3,18 +3,33 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #f9fafb;
 }
 
 header {
   background: linear-gradient(135deg, #4f46e5, #6366f1);
   color: white;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
+.profile {
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid white;
+}
+
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  font-size: 2rem;
 }
 
 header p {
@@ -22,71 +37,98 @@ header p {
   margin-bottom: 20px;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
 .btn {
   background: #ffcc00;
   color: #000;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.btn:hover { background: #ffaa00; }
+.btn:hover {
+  background: #ffaa00;
+}
 
-section {
-  padding: 60px 20px;
-  max-width: 900px;
+main {
+  max-width: 800px;
   margin: auto;
+  padding: 20px;
 }
 
-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #4f46e5;
-}
-
-.program ul {
-  list-style: none;
-  padding: 0;
-}
-
-.program li {
-  background: #f3f4f6;
-  margin: 10px 0;
+.accordion-btn {
+  background: #4f46e5;
+  color: white;
   padding: 15px;
-  border-radius: 8px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.reviews blockquote {
-  border-left: 5px solid #4f46e5;
-  margin: 20px 0;
-  padding: 10px 20px;
-  background: #f9fafb;
+.accordion-btn:hover {
+  background: #4338ca;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background: #f3f4f6;
+  border-radius: 0 0 6px 6px;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  margin: 10px 0;
+  padding-left: 15px;
+  border-left: 4px solid #4f46e5;
   font-style: italic;
+  color: #444;
 }
 
 form {
-  max-width: 500px;
-  margin: auto;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
 }
 
-form input, form textarea {
+form input {
   padding: 12px;
-  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
 form button {
-  width: 100%;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background: #4338ca;
 }
 
 footer {
   background: #111827;
   color: #ddd;
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px;
+  margin-top: 40px;
 }
