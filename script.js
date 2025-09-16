@@ -1,18 +1,14 @@
 // Акордеон
 const buttons = document.querySelectorAll(".accordion-btn");
-
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
     const content = btn.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
+    content.style.display = content.style.display === "block" ? "none" : "block";
   });
 });
 
+// Форма
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
   e.preventDefault();
 
@@ -22,6 +18,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   try {
     const res = await fetch("https://script.google.com/macros/s/AKfycbyFUMEOyU_2jwqourqmXyRea0xyAFM4vrfqrruiUJp_OLxyxhivWIosEqEgORI1rb1ZSg/exec", {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ phone, telegram })
     });
 
@@ -29,7 +26,9 @@ document.getElementById("contactForm").addEventListener("submit", async function
     document.getElementById("status").innerText = result.ok 
       ? "✅ Заявку надіслано!" 
       : "❌ Сталася помилка. Спробуйте ще раз.";
+    if(result.ok) this.reset();
   } catch (err) {
     document.getElementById("status").innerText = "⚠️ Немає з'єднання з сервером.";
+    console.error(err);
   }
 });
