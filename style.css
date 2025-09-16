@@ -132,3 +132,27 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
+/* Новые стили для отзывов-картинок */
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.reviews .review-img {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.reviews img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.reviews img:hover {
+  transform: scale(1.05);
+}
