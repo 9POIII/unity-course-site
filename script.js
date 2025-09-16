@@ -18,7 +18,7 @@ const form = document.getElementById("contactForm");
 const statusDiv = document.getElementById("status");
 
 // Укажи здесь URL твоего Web App после публикации
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyFUMEOyU_2jwqourqmXyRea0xyAFM4vrfqrruiUJp_OLxyxhivWIosEqEgORI1rb1ZSg/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwoxtvhHxSTIuQw_iZVOJ2GWE005TwlmfHyaIxU-zlPqT0qn51tRH7fT7ADEWq_1CwvxA/exec";
 
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
