@@ -1,16 +1,19 @@
+/* Общие настройки */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #f9fafb;
+  color: #f3f4f6; /* светлый текст для тёмного фона */
+  background: linear-gradient(180deg, #0f172a, #1e293b); /* тёмный градиент */
 }
 
+/* Хедер */
 header {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: white;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #f3f4f6;
   padding: 40px 20px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .profile {
@@ -24,7 +27,7 @@ header {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 4px solid white;
+  border: 4px solid #6366f1;
 }
 
 header h1 {
@@ -44,8 +47,8 @@ header p {
 }
 
 .btn {
-  background: #ffcc00;
-  color: #000;
+  background: #6366f1;
+  color: #f3f4f6;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -54,18 +57,20 @@ header p {
 }
 
 .btn:hover {
-  background: #ffaa00;
+  background: #4f46e5;
 }
 
+/* Основной контент */
 main {
   max-width: 800px;
   margin: auto;
   padding: 20px;
 }
 
+/* Аккордеоны */
 .accordion-btn {
   background: #4f46e5;
-  color: white;
+  color: #f3f4f6;
   padding: 15px;
   width: 100%;
   border: none;
@@ -84,56 +89,13 @@ main {
 .accordion-content {
   display: none;
   padding: 15px;
-  background: #f3f4f6;
+  background: rgba(30, 41, 59, 0.85); /* полупрозрачный тёмный фон */
   border-radius: 0 0 6px 6px;
   margin-bottom: 10px;
+  color: #f3f4f6;
 }
 
-blockquote {
-  margin: 10px 0;
-  padding-left: 15px;
-  border-left: 4px solid #4f46e5;
-  font-style: italic;
-  color: #444;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
-}
-
-form input {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-form button {
-  background: #4f46e5;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-form button:hover {
-  background: #4338ca;
-}
-
-footer {
-  background: #111827;
-  color: #ddd;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* Новые стили для отзывов-картинок */
+/* Отзывы-картинки */
 .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -149,10 +111,65 @@ footer {
 .reviews img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s;
 }
 
 .reviews img:hover {
   transform: scale(1.05);
+}
+
+/* Формы */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input {
+  padding: 12px;
+  border: 1px solid #6366f1;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #f3f4f6;
+}
+
+form input::placeholder {
+  color: #cbd5e1;
+}
+
+form button {
+  background: #6366f1;
+  color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #4f46e5;
+}
+
+/* Блоки текста */
+blockquote {
+  margin: 10px 0;
+  padding-left: 15px;
+  border-left: 4px solid #6366f1;
+  font-style: italic;
+  color: #cbd5e1;
+}
+
+/* Футер */
+footer {
+  background: #111827;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #4f46e5;
 }
