@@ -17,8 +17,8 @@ buttons.forEach(btn => {
 const form = document.getElementById("contactForm");
 const statusDiv = document.getElementById("status");
 
-// Укажи здесь URL твоего Web App после публикации
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwoxtvhHxSTIuQw_iZVOJ2GWE005TwlmfHyaIxU-zlPqT0qn51tRH7fT7ADEWq_1CwvxA/exec";
+// URL твоего Web App (после публикации "Deploy → New deployment → Web app")
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxCGsdj_AMoiOL_HKBrnciGtazed0Qk952MVqZ6zTDZmznFhO-EaLMBRtUUS8mgBWwA7g/exec";
 
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
@@ -26,20 +26,22 @@ form.addEventListener("submit", async function(e) {
   const phone = this.phone.value.trim();
   const telegram = this.telegram.value.trim() || "не вказано";
 
-  // Проверка на пустое поле (только телефон обязателен)
   if (!phone) {
     statusDiv.innerText = "⚠️ Введіть номер телефону";
     return;
   }
 
-  // Сообщение пользователю
   statusDiv.innerText = "⏳ Надсилаємо заявку...";
 
   try {
+    // Отправляем FormData (не JSON!)
+    const formData = new FormData();
+    formData.append("phone", phone);
+    formData.append("telegram", telegram);
+
     const response = await fetch(WEB_APP_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone, telegram })
+      body: formData
     });
 
     const result = await response.json();
@@ -56,4 +58,4 @@ form.addEventListener("submit", async function(e) {
     console.error(error);
   }
 });
-//https://script.google.com/macros/s/AKfycbyFUMEOyU_2jwqourqmXyRea0xyAFM4vrfqrruiUJp_OLxyxhivWIosEqEgORI1rb1ZSg/exec
+
