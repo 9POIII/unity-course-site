@@ -4,16 +4,33 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #f3f4f6; /* светлый текст для тёмного фона */
-  background: linear-gradient(180deg, #0f172a, #1e293b); /* тёмный градиент */
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Размытый фон */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("background.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(12px) brightness(0.6);
+  z-index: -1; /* фон уходит назад */
 }
 
 /* Хедер */
 header {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+  background: rgba(15, 23, 42, 0.7); /* полупрозрачный слой поверх фона */
   color: #f3f4f6;
   padding: 40px 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-bottom: 1px solid #4f46e5;
 }
 
 .profile {
@@ -65,6 +82,8 @@ main {
   max-width: 800px;
   margin: auto;
   padding: 20px;
+  position: relative;
+  z-index: 1; /* контент поверх фона */
 }
 
 /* Аккордеоны */
@@ -166,10 +185,12 @@ blockquote {
 
 /* Футер */
 footer {
-  background: #111827;
+  background: rgba(17, 24, 39, 0.8);
   color: #aaa;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
   border-top: 1px solid #4f46e5;
+  position: relative;
+  z-index: 1;
 }
